@@ -5,7 +5,7 @@ kubectl like AWS CLI written in Go
 
 ## Installation
 
-### Build from Source
+### Build Binary
 
 ```
 git clone https://github.com/surajincloud/awsctl
