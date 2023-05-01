@@ -1,5 +1,9 @@
 name: Go Build and Test
-on: workflow_dispatch 
+on:
+  push: 
+    branches:
+      - main
+  pull_request:
 
 env:
   #CGO_ENABLED is set to 0 to disable cgo and ensure the binary is fully static
