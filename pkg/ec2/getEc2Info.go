@@ -38,8 +38,8 @@ func DescribeInstance(tagName string, tagValue []string) []EC2Instance {
 								ec2Instance = append(ec2Instance, EC2Instance{
 									InstanceName:      aws.ToString(j.Value),
 									InstanceID:        aws.ToString(i.InstanceId),
-									InstanceType:      *aws.String(string(*&i.InstanceType)),
-									InstancePrivateIP: aws.ToString(*&i.PrivateIpAddress),
+									InstanceType:      *aws.String(string(i.InstanceType)),
+									InstancePrivateIP: aws.ToString(i.PrivateIpAddress),
 								})
 							}
 						}
@@ -47,8 +47,8 @@ func DescribeInstance(tagName string, tagValue []string) []EC2Instance {
 						ec2Instance = append(ec2Instance, EC2Instance{
 							InstanceName:      aws.ToString(j.Value),
 							InstanceID:        aws.ToString(i.InstanceId),
-							InstanceType:      *aws.String(string(*&i.InstanceType)),
-							InstancePrivateIP: aws.ToString(*&i.PrivateIpAddress),
+							InstanceType:      *aws.String(string(i.InstanceType)),
+							InstancePrivateIP: aws.ToString(i.PrivateIpAddress),
 						})
 					}
 				}
